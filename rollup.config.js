@@ -8,7 +8,7 @@ import jsx from 'acorn-jsx';
 export default {
     input: 'src/index.tsx',
     output: {
-        file: 'dist/react-sliding-pane.js',
+        dir: 'dist/',
         format: 'esm',
     },
     external: [
@@ -27,6 +27,7 @@ export default {
         postcss({
             extract: true
         }),
-        typescript({ jsx: 'preserve' }),
+        typescript({ jsx: 'React'}),
     ],
+    preserveModules: true,
 };

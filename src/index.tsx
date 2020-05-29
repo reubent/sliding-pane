@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import './index.css'
 
 var CLOSE_TIMEOUT = 500;
 
