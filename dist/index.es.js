@@ -1,11 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-var Modal = _interopDefault(require('react-modal'));
+import React from 'react';
+import Modal from 'react-modal';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -55,5 +49,4 @@ var IconClose = function () {
 };
 //export default ReactSlidingPane;
 
-exports.IconClose = IconClose;
-exports.ReactSlidingPane = ReactSlidingPane;
+export { IconClose, ReactSlidingPane };

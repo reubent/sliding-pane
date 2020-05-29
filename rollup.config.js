@@ -4,18 +4,21 @@ import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss'
 import typescript from '@rollup/plugin-typescript';
 import jsx from 'acorn-jsx';
+import pkg from './package.json'
 
 export default {
     input: 'src/index.tsx',
-    output: {
-        dir: 'dist/',
-        format: 'esm',
+    output: [{
+        dir: "dist/"+pkg.main,
+        format: 'cjs',
     },
+    {
+        dir: "dist/"+pkg.module,
+        format: 'es',
+    }],
     external: [
-        'react',
-        'react-dom',
-        'react-modal',
-        'prop-types',
+        ...Object.keys(pkg.dependencies || {}),
+        ...Object.keys(pkg.peerDependencies || {}),
     ],
     acornInjectPlugins: [jsx()],
     plugins: [
@@ -25,7 +28,7 @@ export default {
         resolve(),
         commonjs(),
         postcss({
-            extract: true
+            // extract: true
         }),
         typescript({ jsx: 'React'}),
     ],

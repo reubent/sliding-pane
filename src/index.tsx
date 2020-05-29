@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import './index.css'
 
-var CLOSE_TIMEOUT = 500;
+const CLOSE_TIMEOUT = 500;
 
 export type eventHandler = (event: any) => void
 
@@ -68,4 +68,4 @@ export const IconClose = () => {
     </svg>
 }
 
-export default ReactSlidingPane;
+//export default ReactSlidingPane;
