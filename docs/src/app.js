@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Modal from 'react-modal';
 // import SlidingPane from 'react-sliding-pane';
 // import 'react-sliding-pane/dist/react-sliding-pane.css';
-import SlidingPane from '../../dist/react-sliding-pane.js';
+import SlidingPane from '../../dist/react-sliding-pane';
 import '../../dist/react-sliding-pane.css';
 
 class App extends Component {
