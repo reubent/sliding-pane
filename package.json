@@ -7,15 +7,14 @@
   "files": ["dist"],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "docs": "rollup -c rollup-docs.config.js",
+    "build": "node_modules/typescript/bin/tsc --jsx react",
     "lint": "eslint ./src",
     "prepublishOnly": "echo \"BUILD BEFORE PUBLISH\"; npm run build"
   },
   "registry": "https://registry.npmjs.org/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DimitryDushkin/sliding-pane.git"
+    "url": "git+https://github.com/reubent/sliding-pane.git"
   },
   "keywords": [
     "react",
@@ -33,10 +32,6 @@
   ],
   "author": "Dimitry Dushkin (dndushkin@gmail.com)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DimitryDushkin/sliding-pane/issues"
-  },
-  "homepage": "https://github.com/DimitryDushkin/sliding-pane",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react-modal": "^3.11.1",
