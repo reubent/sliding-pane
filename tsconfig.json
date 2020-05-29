@@ -5,8 +5,8 @@
     "declarationDir": "./dist",
     "module": "CommonJS",
     "target": "ES5",
-    "noImplicitAny": false
-
+    "noImplicitAny": false,
+    "removeComments": true
   },
   "include": [
     "src/**/*"

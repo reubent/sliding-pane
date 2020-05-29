@@ -7,7 +7,7 @@
   "files": ["dist"],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "node_modules/typescript/bin/tsc --jsx react",
+    "build": "node_modules/typescript/bin/tsc --jsx react && cp src/index.css dist/",
     "lint": "eslint ./src",
     "prepublishOnly": "echo \"BUILD BEFORE PUBLISH\"; npm run build"
   },
